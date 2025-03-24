@@ -1,60 +1,58 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
 }
 
 h1 {
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 32px;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
 }
 
-p {
-    font-size: 25px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-img {
-    width: 100%;
-}
-
-div img {
-    width: 150px;
-    height: 150px;
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
     display: block;
-    margin: auto;
-}
+    max-width: 100%; /* Thu nhỏ ảnh tối đa 80% của phần tử chứa */
+    height: auto;
+    margin: 0 auto;
+  }
 
-div {
-    display: inline-block;
-    width: 24%;
-    margin: 5px;
-    padding: 2px;
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
     text-align: center;
 }
 
-/* Media Query #1: Tablet View (≥772px) */
-@media (min-width: 772px) {
-    div {
-        width: 45vw; /* Mỗi div chiếm 45% viewport width */
-        display: inline-block;
-        vertical-align: top;
-    }
-    img {
-        max-height: 30vh; /* Ảnh có chiều cao tối đa là 30% viewport height */
-        width: auto;
-    }
+.grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Media Query #2: Large Screen View (≥998px) */
-@media (min-width: 998px) {
-    div {
-        width: 30vw; /* Mỗi div chiếm 30% viewport width */
-    }
+.grid img {
+    width: 200px;
+    height: auto;
+    border: 5px solid blue;
+    border-radius: 15px;
 }
